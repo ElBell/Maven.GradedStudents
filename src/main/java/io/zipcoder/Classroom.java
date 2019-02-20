@@ -87,8 +87,5 @@ public class Classroom {
     public int getNumDs() {
         return (int)Math.ceil(students.size() * .39) + getNumCs();
     }
-    public int getNumFs() {
-        return (int)Math.floor(students.size() * .11) + getNumDs();
-    }
 
 }

@@ -76,20 +76,20 @@ public class Student implements Comparable<Student>{
             return -3;
         } else if (student.getAerageExamScore()  > getAerageExamScore()){
             return 3;
-        } else { return 0;
-//            if (student.getLastName().compareTo(getLastName()) > 0) {
-//                return 2;
-//            } else if (student.getLastName().compareTo(getLastName()) < 0){
-//                return -2;
-//            } else {
-//                if (student.getFirstName().compareTo(getFirstName()) > 0) {
-//                    return 2;
-//                } else if (student.getFirstName().compareTo(getFirstName()) < 0){
-//                    return -2;
-//                } else {
-//                    return 0;
-//                }
-//            }
+        } else {
+            if (student.getLastName().compareTo(getLastName()) > 0) {
+                return 2;
+            } else if (student.getLastName().compareTo(getLastName()) < 0){
+                return -2;
+            } else {
+                if (student.getFirstName().compareTo(getFirstName()) > 0) {
+                    return 2;
+                } else if (student.getFirstName().compareTo(getFirstName()) < 0){
+                    return -2;
+                } else {
+                    return 0;
+                }
+            }
         }
     }
 }
