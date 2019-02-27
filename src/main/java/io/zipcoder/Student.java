@@ -72,24 +72,9 @@ public class Student implements Comparable<Student>{
     }
 
     public int compareTo(Student student) {
-        if (student.getAerageExamScore() < getAerageExamScore()) {
-            return -3;
-        } else if (student.getAerageExamScore()  > getAerageExamScore()){
-            return 3;
-        } else {
-            if (student.getLastName().compareTo(getLastName()) > 0) {
-                return 2;
-            } else if (student.getLastName().compareTo(getLastName()) < 0){
-                return -2;
-            } else {
-                if (student.getFirstName().compareTo(getFirstName()) > 0) {
-                    return 2;
-                } else if (student.getFirstName().compareTo(getFirstName()) < 0){
-                    return -2;
-                } else {
-                    return 0;
-                }
-            }
-        }
+        int averageScoresCompare = student.getAerageExamScore().compareTo(getAerageExamScore()) * 1000;
+        int lastNameCompare = student.getLastName().compareTo(lastName) * 10;
+        int firstNameCompare = student.getFirstName().compareTo(firstName);
+        return averageScoresCompare + lastNameCompare + firstNameCompare;
     }
 }
